@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{global.title}}</title>
+    <meta charset="utf-8">
+    <meta name="description" value="{{global.desc}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+{{>head}}
+  </head>
+  <body>
+    
+    {{>nav}}
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_4.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">Contact</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    		<section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="container">
+				<div class="row d-flex">
+          <div class="col-md-5 ftco-animate img img-2" style="background-image: url();"></div>
+          <div class="col-md-7 ftco-animate makereservation p-4 p-md-5">
+          	<div class="heading-section ftco-animate mb-5">
+	          	<span class="subheading">Contact Us</span>
+	            <h2 class="mb-4">We are at your service 24 X 7</h2>
+	          </div>
+            <form action="/order" method="post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your First Name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Last Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Last Name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Your Email">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="">Subject</label>
+                    <input type="text" id="Subject" name="subject" class="form-control" placeholder="Subject">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="">Message</label>
+                      <textarea id="order" name="order" class="form-control" id="" rows="6" placeholder="Enter your query here.. "></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <div class="form-group" class="orderbtn-container">
+                    <input type="submit" style="background-color: #990000;background-image: linear-gradient(147deg, #990000 0%, #ff0000 74%);" id="orderbtn" value="Order Now" class="btn btn-primary py-3 px-5">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+			</div>
+		</section>
+    {{>footer}}
+  
+
+{{>scripts}}

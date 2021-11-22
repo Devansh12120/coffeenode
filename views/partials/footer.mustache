@@ -1,0 +1,115 @@
+<style>
+.submitbtn{
+  border:3px solid #dc3545;
+}
+.submitbtn:hover{
+  background:white;
+  color:#dc3545;
+}
+</style>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3 col-lg-4">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">{{global.title}}</h2>
+              <p>{{global.desc}}</p>
+            </div>
+		      </div>		  
+          <div class="col-md-3 col-lg-4">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Opening Hours</h2>
+              <ul class="list-unstyled open-hours">
+              {{#global.hours}}
+                <li class="d-flex"><span>{{day}}</span><span>{{time}}</span></li>
+              {{/global.hours}}
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-4">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Like Share & Subscribe</h2>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter" data-toggle="tooltip" data-placement="top" title="Twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook" data-toggle="tooltip" data-placement="top" title="Facebook" ></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram" data-toggle="tooltip" data-placement="top" title="Instagram"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-snapchat" data-toggle="tooltip" data-placement="top" title="Snapchat"></span></a></li><br>
+                <li class="ftco-animate"><a href="#"><span class="icon-google" data-toggle="tooltip" data-placement="top" title="Google"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-youtube" data-toggle="tooltip" data-placement="top" title="You-tube"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-reddit" data-toggle="tooltip" data-placement="top" title="Reddit"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-tumblr-square" data-toggle="tooltip" data-placement="top" title="Tumbler"></span></a></li>
+              </ul>
+            </div>
+          </div>
+       
+        </div>
+            <div class="col-md-12 col-lg-12">
+              <div class="ftco-footer-widget">
+                <h2 class="ftco-heading-2">Subscribe Now</h2><br>  
+                <form action="/save" method="post">
+                  <div class="row">
+                    <div class="col-md-3 mt-3">
+                      <p>{{global.subscribe}}</p>
+                    </div>
+                    
+                    <div class="col-md-6 mt-3">
+                      <div class="form-group">
+                        <input type="email" name="email" id="email"  placeholder="Enter mail" class="form-control" required>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mt-3">
+                      <div class="form-group">
+                        <input type="submit" value="Make a Reservation" id="submitbtn" class="submitbtn btn btn-danger py-3 px-5">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>   
+		<div class="row">
+          <div class="col-md-12 text-center">
+
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <i class="icon-heart" aria-hidden="true"></i> by <a target="_blank">{{global.designer}}</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+  
+  (function(){
+    $('#submitbtn').click(function(event){
+      if(event)
+        event.preventDefault()
+      var order={
+        email:$('#email').val()
+      }
+      console.log('Place Order: '+JSON.stringify(order))
+      $.ajax({
+        url:'/save',
+        method:'post',
+        data: order,
+        success: function(resp){
+          console.log('Order Recieved: ' +JSON.stringify(resp))
+          $('#submitbtn').attr('value', 'Email saved successfully');
+          $('#submitbtn').css({backgroundColor: '#00b712'});
+          $('#submitbtn').css({backgroundImage: 'linear-gradient(315deg, #00b712 0%, #5aff15 74%)'});
+        },
+        error: function(resp){
+
+        }
+      })
+    })
+    })()
+  </script>    
+  </body>
+
+    
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>

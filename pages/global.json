@@ -1,0 +1,19 @@
+{
+    "title": "Expreso Coffee",
+    "desc": "Welcome  to Expresso Coffee!!  We hope that you enjoyed your meal. Have a great day",
+    "bg_image1":"/images/barista.jpg",
+    "bg_image2":"/images/barista-2.jpg",
+    "para_1":"Combination of real and pure coco beans which will clear your throat.Every recepie is cooked under optimal temperature condtions to preserve ingredients",
+    "para_2":"Every item is a real mix of taste and its ingredients being 100% organic. Because being natural and organic is what we serve to our customers",
+    "para_3":"We rely on pur promising customers to provide our optimal service.We are able to serve our customres 24X7",
+    "para_4":"Best service in the town. We pardon for your patience and try to serve ypu as fast as possible. 10 mintues of patience to enjoy exquisite delecies.",
+    "bg_image3":"/images/barista-3.jpg",
+    "bg_image4":"/images/bg_6.jpg",
+    "designer":"Devansh shah",
+    "subscribe":"Subscribe to our newsletter to recieve latest feed, delecious recepies, healthy diets, controlled weight loss and updates about our caffee.",
+    "hours":[
+        {"day":"Mon - Fri" , "time":"6:00am - 10:00pm"},
+        {"day":"Saturday" , "time":"7:00am - 7:00pm"},
+        {"day":"Sunday" , "time":"closed"}
+    ]
+}
